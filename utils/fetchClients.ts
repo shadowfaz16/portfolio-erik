@@ -7,6 +7,8 @@ export const fetchClients = async() => {
     const clients: Client[] = data.clients;
 
     console.log("fetching", clients);
+    console.log("check token", process.env.NEXT_PUBLIC_BASE_URL);
+
 
     return clients;
 }

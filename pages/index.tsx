@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import { createClient } from 'next-sanity'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,6 +24,9 @@ type Props = {
   projects: Project[];
   socials: Social[];
 }
+createClient({ projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID });
+
+
 
 const Home = ({pageInfo, experiences, clients, projects, socials}: Props) => {
   return (

@@ -23,7 +23,11 @@ const Hero = ({pageInfo}: Props) => {
       loop: true,
       delaySpeed: 2000,
     });
+
+    console.log("check token", process.env.NEXT_PUBLIC_BASE_URL);
+
   return (
+    
     <div className="h-screen flex flex-col space-y-8 justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <img
