@@ -1,13 +1,16 @@
 import { Client } from "../typings";
+import { groq } from "next-sanity";
+import { sanityClient } from "../sanity";
 
 export const fetchClients = async() => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getClients`);
+    const query = groq`
+    *[_type == "client"]
+`
+    const res = await sanityClient.fetch(query)
 
-    const data = await res.json()
-    const clients: Client[] = data.clients;
+    const clients: Client[] = res;
 
     console.log("fetching", clients);
-    console.log("check token", process.env.NEXT_PUBLIC_BASE_URL);
 
 
     return clients;
