@@ -39,7 +39,7 @@ export interface Project extends SanityBody {
     image: Image;
     linkToProject: string;
     summary: string;
-    clients: Client[];
+    // clients: Client[];
 }
 
 export interface Experience extends SanityBody {
