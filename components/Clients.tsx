@@ -1,10 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Client from './Client';
+import {Client as MyClient} from '../typings';
 
-type Props = {}
+type Props = {
+  clients: MyClient[];
+}
 
-const Clients = (props: Props) => {
+const Clients = ({clients}: Props) => {
   return (
     <motion.div 
     initial={{ opacity: 0 }}
@@ -17,26 +20,10 @@ const Clients = (props: Props) => {
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
         Click a client to see their website!
       </h3>
-
-      <div className="grid grid-cols-4 gap-5">
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-        <Client />
-
-        
+      <div className="grid grid-cols-4 gap-4">
+        {clients?.map(client => (
+          <Client key={client._id} client={client} />
+        ))}
       </div>
     </motion.div>
   );

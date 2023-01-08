@@ -33,10 +33,10 @@ const ExperienceCard = ({experience}: Props) => {
         className="w-28 h-28 rounded-full object-cover object-center xl:w-32 xl:h-32"
       />
       <div className="px-0 md:px-10">
-        <h4 className="text-3xl font-light">
-          Product Owner at Weset
+        <h4 className="text-xl lg:text-3xl font-light">
+          {experience.jobTitle}
         </h4>
-        <p className="font-bold text-xl mt-1">WESET</p>
+        <p className="font-bold text-lg mt-1">{experience.company}</p>
         <div className="flex space-x-2 mt-2">
           <img className="h-10 w-10 rounded-full" src="" alt="" />
           <img className="h-10 w-10 rounded-full" src="" alt="" />

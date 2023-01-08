@@ -1,13 +1,16 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import metashadow from "../public/metashadowlogo.png";
+import { Client } from '../typings';
+import { urlFor } from '../sanity';
 
 
 type Props = {
+  client: Client;
     directionLeft?: boolean
 }
 
-const Client = ({directionLeft}: Props) => {
+const Client = ({client, directionLeft}: Props) => {
   return (
     <div className="group relative flex cursor-pointer">
       <motion.img
@@ -22,13 +25,13 @@ const Client = ({directionLeft}: Props) => {
           opacity: 1,
           x: 0,
         }}
-        src="https://pbs.twimg.com/profile_images/1592562041277014018/Y5zcTsbi_400x400.png"
+        src={urlFor(client?.image).url()}
         alt="client"
         className="rounded-full border border-gray-500 object-cover w-20 h-20 xl:w-24 xl:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
       />
-      <div className="absolute opacity-0 group-hover:opacity-75 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 xl:w-24 xl:h-24 rounded-full z-0">
+      <div className="absolute opacity-0 group-hover:opacity-75 transition duration-300 ease-in-out group-hover:bg-white h-20 w-20 xl:w-24 xl:h-24 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
-          <p className="text-2xl font-bold text-black opacity-100">100%</p>
+          <p className="text-2xl font-bold text-black opacity-100">{client?.title}</p>
         </div>
       </div>
     </div>

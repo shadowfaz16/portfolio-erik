@@ -25,17 +25,17 @@ const ContactMe = (props: Props) => {
     }
 
   return (
-    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+    <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row px-10 justify-evenly mx-auto items-center">
       <h3 className="absolute top-24 uppercase tracking-[15px] text-gray-500 text-xl">
         Contact
       </h3>
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-3xl font-semibold text-center">
+      <div className="flex flex-col space-y-7">
+        <h4 className="text-2xl font-semibold text-center lg:text-3xl">
           I&apos;ve got just what you need.
           <br />{" "}
           <span className="underline decoration-[#6d28d9]">Lets Talk.</span>
         </h4>
-        <div className="space-y-7">
+        <div className="space-y-5">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="animate-pulse w-7 h-7 text-purple-700" />
             <p className="text-lg">8116829376</p>
@@ -50,7 +50,7 @@ const ContactMe = (props: Props) => {
           </div>
         </div>
         <form
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="flex space-x-2">
@@ -84,7 +84,6 @@ const ContactMe = (props: Props) => {
           >
             Submit
           </button>
-          <div></div>
         </form>
       </div>
     </div>
