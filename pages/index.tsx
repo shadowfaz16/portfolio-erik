@@ -60,7 +60,7 @@ const Home = ({pageInfo, experiences, clients, projects, socials}: Props) => {
 
       {/* projects */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects}/>
       </section>
 
       {/* contact */}

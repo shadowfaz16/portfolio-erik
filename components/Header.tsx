@@ -55,7 +55,7 @@ const Header = ({ socials }: Props) => {
         {/* avatar */}
         <SocialIcon
           className="cursor-pointer"
-          network="email"
+          network="telegram"
           fgColor="gray"
           bgColor="transparent"
         />

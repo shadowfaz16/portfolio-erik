@@ -16,18 +16,17 @@ const Hero = ({pageInfo}: Props) => {
     const [text, count] = useTypewriter({
       words: [
         `${pageInfo?.name}`,
-        "Bullish on crypto",
+        "Bullish on web3",
         "<ILoveToCode />",
-        "Guy-who-loves-Coffee.tsx",
+        "Also-love-Crypto.tsx",
       ],
       loop: true,
       delaySpeed: 2000,
     });
 
-    console.log("check token", process.env.NEXT_PUBLIC_BASE_URL);
+    // console.log("check token", process.env.NEXT_PUBLIC_BASE_URL);
 
   return (
-    
     <div className="h-screen flex flex-col space-y-8 justify-center text-center overflow-hidden">
       <BackgroundCircles />
       <img
@@ -37,11 +36,11 @@ const Hero = ({pageInfo}: Props) => {
         width={115}
         height={115}
       />
-      <div className='z-20'>
+      <div className="z-20">
         <h3 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h3>
-        <h2 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h2 className="text-3xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#6d28d9" />
         </h2>
@@ -58,6 +57,9 @@ const Hero = ({pageInfo}: Props) => {
           </Link>
           <Link href="#projects">
             <button className="heroButton">Projects</button>
+          </Link>
+          <Link href="#contact">
+            <button className="heroButton">Contact</button>
           </Link>
         </div>
       </div>

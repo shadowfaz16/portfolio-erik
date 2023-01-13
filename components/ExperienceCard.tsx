@@ -12,7 +12,7 @@ type Props = {
 
 const ExperienceCard = ({experience}: Props) => {
   return (
-    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[600px] xl:w-[700px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 hover:cursor-pointer transition-opacity duration-200 overflow-hidden'>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[600px] xl:w-[700px] snap-center bg-[#292929] p-10 opacity-40 hover:opacity-100 hover:cursor-pointer transition-opacity duration-200 overflow-hidden lg:opacity-75'>
       <motion.img
         initial={{
           y: -100,
@@ -29,7 +29,7 @@ const ExperienceCard = ({experience}: Props) => {
           once: true,
         }}
         src={urlFor(experience?.companyImage).url()}
-        alt="weset"
+        alt="companyImage"
         className="w-28 h-28 rounded-full object-cover object-center xl:w-32 xl:h-32"
       />
       <div className="px-0 md:px-10">
