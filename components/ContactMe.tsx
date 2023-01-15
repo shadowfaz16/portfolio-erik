@@ -1,6 +1,7 @@
 import React from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon, } from "@heroicons/react/24/solid"
 import { useForm, SubmitHandler } from "react-hook-form";
+import { SocialIcon } from 'react-social-icons';
 
 
 type Inputs = {
@@ -41,7 +42,12 @@ const ContactMe = (props: Props) => {
             <p className="text-lg">8116829376</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="animate-pulse w-7 h-7 text-purple-700" />
+            <SocialIcon
+              className="animate-pulse w-7 h-7 text-purple-700 cursor-pointer"
+              network="whatsapp"
+              fgColor="#7e22ce"
+              bgColor="transparent"
+            />
             <p className="text-lg">8116829376</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">

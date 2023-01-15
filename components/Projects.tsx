@@ -58,7 +58,7 @@ const Projects = ({projects}: Props) => {
 
               </h4>
               
-              <p className="text-center md:text-left">
+              <p className="text-center">
                 {project?.summary}
               </p>
             </div>

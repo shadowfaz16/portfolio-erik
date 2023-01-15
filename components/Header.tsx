@@ -2,6 +2,7 @@ import React from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 import { Social } from '../typings'
+import Link from 'next/link'
 
 type Props = {
   socials: Social[];
@@ -29,11 +30,11 @@ const Header = ({ socials }: Props) => {
         {/* social icons */}
         {socials.map((social) => (
           <SocialIcon
-          key={social._id}
-          url={social.url}
-          fgColor="gray"
-          bgColor="transparent"
-        />
+            key={social._id}
+            url={social.url}
+            fgColor="gray"
+            bgColor="transparent"
+          />
         ))}
       </motion.div>
       <motion.div
@@ -53,15 +54,18 @@ const Header = ({ socials }: Props) => {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         {/* avatar */}
-        <SocialIcon
-          className="cursor-pointer"
-          network="telegram"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          Get in Touch
-        </p>
+          <SocialIcon
+            className="cursor-pointer"
+            network="telegram"
+            fgColor="gray"
+            bgColor="transparent"
+            url='https://t.me/shadowfaz16'
+          />
+        <Link href="https://t.me/shadowfaz16">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            Get in Touch
+          </p>
+        </Link>
       </motion.div>
     </header>
   );

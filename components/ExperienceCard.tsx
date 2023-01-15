@@ -1,8 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import weset from "../public/weset.png";
-import pxm from "../public/pxm.png";
-import zigu from "../public/zigu.png";
 import { Experience } from '../typings';
 import { urlFor } from '../sanity';
 
