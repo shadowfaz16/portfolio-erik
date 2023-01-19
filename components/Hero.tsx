@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import Image from "next/image";
 import Link from 'next/link';
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
-
+import { useAccount } from "wagmi";
+import useIsMounted from './useIsMounted';
 
 type Props = {
   pageInfo: PageInfo
 }
 
 const Hero = ({pageInfo}: Props) => {
+  const mounted = useIsMounted();
+  const { address, isConnected } = useAccount();
     const [text, count] = useTypewriter({
       words: [
         `${pageInfo?.name}`,
@@ -23,7 +26,12 @@ const Hero = ({pageInfo}: Props) => {
       delaySpeed: 2000,
     });
 
-    // console.log("check token", process.env.NEXT_PUBLIC_BASE_URL);
+    // useEffect(() => {
+    //   if (isConnected) {
+    //     console.log("Connected"); 
+    //   }, [isConnected]);
+
+
 
   return (
     <div className="h-screen flex flex-col space-y-8 justify-center text-center overflow-hidden">
@@ -39,6 +47,7 @@ const Hero = ({pageInfo}: Props) => {
         <h3 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] px-3 lg:px-0">
           {pageInfo?.role}
         </h3>
+          {/* {mounted ? address : null} */}
         <h2 className="text-3xl lg:text-6xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#6d28d9" />
@@ -59,6 +68,9 @@ const Hero = ({pageInfo}: Props) => {
           <Link href="#contact">
             <button className="heroButton">Contact</button>
           </Link>
+        </div>
+        <div>
+         {mounted ? (isConnected ? address : <p>hola</p>) : null}
         </div>
       </div>
     </div>
