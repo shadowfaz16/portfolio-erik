@@ -69,9 +69,9 @@ const Hero = ({pageInfo}: Props) => {
             <button className="heroButton">Contact</button>
           </Link>
         </div>
-        <div>
+        {/* <div>
          {mounted ? (isConnected ? address : <p>hola</p>) : null}
-        </div>
+        </div> */}
       </div>
     </div>
   );
