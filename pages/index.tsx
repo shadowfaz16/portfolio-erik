@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import About from '../components/About'
-import Clients from '../components/Clients'
+import Clients from '../components/Collabs'
 import ContactMe from '../components/ContactMe'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
@@ -16,6 +16,10 @@ import { fetchExperiences } from '../utils/fetchExperiences'
 import { fetchPageInfo } from '../utils/fetchPageInfo'
 import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSocials } from '../utils/fetchSocials'
+import {
+  ArrowUpCircleIcon
+} from "@heroicons/react/24/solid";
+
 
 type Props = {
   pageInfo: PageInfo;
@@ -68,14 +72,10 @@ const Home = ({pageInfo, experiences, clients, projects, socials}: Props) => {
         <ContactMe />
       </section>
 
-      <footer className="sticky bottom-5 w-full">
+      <footer className="sticky bottom-5 w-full  lg:block">
         <div className="flex items-center justify-center">
           <Link href="#hero">
-            <img
-              src=""
-              alt=""
-              className="w-10 h-10 filter grayscale hover:grayscale-0 cursor-pointer"
-            />
+            <ArrowUpCircleIcon className="w-10 h-10 text-white hover:text-purple-500 cursor-pointer" />
           </Link>
         </div>
       </footer>

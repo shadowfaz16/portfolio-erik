@@ -26,7 +26,7 @@ const Header = ({ socials }: Props) => {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center"
+        className="-mt-1 lg:mt-0"
       >
         {/* social icons */}
         {socials.map((social) => (
@@ -37,6 +37,15 @@ const Header = ({ socials }: Props) => {
             bgColor="transparent"
           />
         ))}
+        {/* <Link href="https://t.me/shadowfaz16">
+          <SocialIcon
+            className="cursor-pointer"
+            network="telegram"
+            fgColor="gray"
+            bgColor="transparent"
+            url="https://t.me/shadowfaz16"
+          />
+        </Link> */}
       </motion.div>
       <motion.div
         initial={{
@@ -55,18 +64,6 @@ const Header = ({ socials }: Props) => {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         {/* avatar */}
-        {/* <SocialIcon
-            className="cursor-pointer"
-            network="telegram"
-            fgColor="gray"
-            bgColor="transparent"
-            url='https://t.me/shadowfaz16'
-          />
-        <Link href="https://t.me/shadowfaz16">
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-            Get in Touch
-          </p>
-        </Link> */}
         <ConnectButton accountStatus="avatar" chainStatus="icon" />
       </motion.div>
     </header>

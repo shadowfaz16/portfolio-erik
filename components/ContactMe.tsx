@@ -1,5 +1,5 @@
 import React from 'react'
-import {PhoneIcon, MapPinIcon, EnvelopeIcon, } from "@heroicons/react/24/solid"
+import {PhoneIcon, MapPinIcon, EnvelopeIcon} from "@heroicons/react/24/solid"
 import { useForm, SubmitHandler } from "react-hook-form";
 import { SocialIcon } from 'react-social-icons';
 
@@ -32,34 +32,35 @@ const ContactMe = (props: Props) => {
       </h3>
       <div className="flex flex-col space-y-7">
         <h4 className="text-2xl font-semibold text-center lg:text-3xl">
-          I&apos;ve got just what you need.
-          <br />{" "}
-          <span className="underline decoration-[#6d28d9]">Lets Talk.</span>
+          I&apos;ve got just what you need
+          <br /> <span className="underline decoration-[#6d28d9]">LFTalk</span>
         </h4>
-        <div className="space-y-5">
-          <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="animate-pulse w-7 h-7 text-purple-700" />
-            <p className="text-lg">8116829376</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <SocialIcon
-              className="animate-pulse w-7 h-7 text-purple-700 cursor-pointer"
-              network="whatsapp"
-              fgColor="#7e22ce"
-              bgColor="transparent"
-            />
-            <p className="text-lg">8116829376</p>
-          </div>
-          <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="animate-pulse w-7 h-7 text-purple-700" />
-            <p className="text-lg">erikfazju@gmail.com</p>
-          </div>
+        <div className="flex items-center justify-center">
+          <PhoneIcon className="animate-pulse w-7 h-7 text-purple-700" />
+          <SocialIcon
+            className="animate-pulse w-7 h-7 text-purple-700 cursor-pointer"
+            network="whatsapp"
+            fgColor="#7e22ce"
+            bgColor="transparent"
+          />
+          <SocialIcon
+            className="animate-pulse w-7 h-7 cursor-pointer"
+            network="telegram"
+            fgColor="#7e22ce"
+            bgColor="transparent"
+          />
+          <SocialIcon
+            network="email"
+            fgColor="#7e22ce"
+            bgColor="transparent"
+            className="animate-pulse w-7 h-7 cursor-pointer"
+          />
         </div>
         <form
           className="flex flex-col space-y-2 mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex space-x-2">
+          <div className="flex gap-x-2">
             <input
               {...register("name")}
               placeholder="Name"

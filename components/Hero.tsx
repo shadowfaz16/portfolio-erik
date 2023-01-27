@@ -44,12 +44,12 @@ const Hero = ({pageInfo}: Props) => {
         height={115}
       />
       <div className="z-20">
-        <h3 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] px-3 lg:px-0">
+        <h3 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px] lg:px-0">
           {pageInfo?.role}
         </h3>
-          {/* {mounted ? address : null} */}
+        {/* {mounted ? address : null} */}
         <h2 className="text-3xl lg:text-6xl font-semibold px-10">
-          <span className="mr-3">{text}</span>
+          <span className="mx-1">{text}</span>
           <Cursor cursorColor="#6d28d9" />
         </h2>
         <div className="pt-5">
@@ -68,10 +68,21 @@ const Hero = ({pageInfo}: Props) => {
           <Link href="#contact">
             <button className="heroButton">Contact</button>
           </Link>
+          {mounted ? (
+            isConnected ? (
+              <Link href="#pay">
+                <button className="heroButton">Pay</button>
+              </Link>
+            ) : null
+          ) : null}
         </div>
-        {/* <div>
-         {mounted ? (isConnected ? address : <p>hola</p>) : null}
-        </div> */}
+        {mounted ? (
+          isConnected ? (
+            <Link href="#pay">
+              <button className="heroButton lg:hidden">Pay</button>
+            </Link>
+          ) : null
+        ) : null}
       </div>
     </div>
   );
