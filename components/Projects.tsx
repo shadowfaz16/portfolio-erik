@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { Project } from '../typings';
 import { urlFor } from "../sanity";
+import Link from 'next/link';
 
 
 type Props = {
@@ -24,10 +25,10 @@ const Projects = ({projects}: Props) => {
       className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-xl">
-        Projects
+        My Projects
       </h3>
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#6d28d9]/50">
-        {projects?.map((project, id) => (
+        {projects?.sort((a, b) => b.title.localeCompare(a.title)).map((project, id) => (
           <div
             key={id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-10 items-center justify-center p-20 md:p-44 h-screen"
@@ -55,12 +56,13 @@ const Projects = ({projects}: Props) => {
                   {/* Case Study {id + 1} of {projects?.length}: */}
                 </span>{" "}
                 {project?.title}
-
-              </h4>
-              
+              </h4>  
               <p className="text-center">
                 {project?.summary}
               </p>
+              <Link className="flex items-center justify-center" href={`${project?.linkToProject}`}>
+                {project?.linkToProject}
+              </Link>
             </div>
           </div>
         ))}

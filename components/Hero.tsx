@@ -26,6 +26,15 @@ const Hero = ({pageInfo}: Props) => {
       delaySpeed: 2000,
     });
 
+    const useFunds = () => {
+      (window as any).Cypher(
+        `${address}`,
+        "0x1",
+        "0xdac17f958d2ee523a2206206994597c13d831ec7",
+        23,
+      );
+    }
+
     // useEffect(() => {
     //   if (isConnected) {
     //     console.log("Connected"); 
@@ -36,7 +45,7 @@ const Hero = ({pageInfo}: Props) => {
   return (
     <div className="h-screen flex flex-col space-y-8 justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <img
+      <Image
         src={urlFor(pageInfo?.heroImage).url()}
         className="relative mx-auto rounded-full object-cover border border-gray-600"
         alt="logo"
@@ -71,18 +80,11 @@ const Hero = ({pageInfo}: Props) => {
           {mounted ? (
             isConnected ? (
               <Link href="#pay">
-                <button className="heroButton">Pay</button>
+                <button className="heroButton" onClick={useFunds}>Pay</button>
               </Link>
             ) : null
           ) : null}
         </div>
-        {mounted ? (
-          isConnected ? (
-            <Link href="#pay">
-              <button className="heroButton lg:hidden">Pay</button>
-            </Link>
-          ) : null
-        ) : null}
       </div>
     </div>
   );

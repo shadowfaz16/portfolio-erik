@@ -40,7 +40,8 @@ const ExperienceCard = ({experience}: Props) => {
           <img className="h-10 w-10 rounded-full" src="" alt="" />
           <img className="h-10 w-10 rounded-full" src="" alt="" />
         </div>
-        <p className='uppercase py-5 text-gray-300'>{new Date(experience.dateStarted).toDateString()} -{" "} {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toDateString()}</p>
+<p className='uppercase py-5 text-gray-300'>{new Date(experience.dateStarted).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} -{" "} {experience.isCurrentlyWorkingHere ? "Present" : new Date(experience.dateEnded).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</p>
+
         <ul className="list-disc space-y-4 ml-5 text-sm md:text-base">
             {experience.points.map((point, i) => (
                 <li key={i}>{point}</li>
