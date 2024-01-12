@@ -45,13 +45,14 @@ export interface Project extends SanityBody {
 export interface Experience extends SanityBody {
     _type: 'experience';
     company: string;
-    companyImage: Image;
+    companyImage: string;
+    stack: StaticImageData[];
     dateStarted: date;
     dateEnded: date;
     isCurrentlyWorkingHere: boolean;
     jobTitle: string;
     points: string[];
-    clients: Client[];
+
 }
 
 export interface Social extends SanityBody {
