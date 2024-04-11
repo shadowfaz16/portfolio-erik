@@ -21,9 +21,31 @@ import link from "../assets/coins/link.png"
 import thirdwebb from '../assets/logos/thirdweb-circle-dark.svg'
 import openai from '../assets/logos/openai.png'
 import veme from '../assets/logos/veme.png'
-import { StaticImageData } from 'next/image';
+import aceternity from '../assets/logos/aceternity.png'
+import tensorflow from '../assets/logos/tensorflow.png'
+import nobananas from '../assets/logos/nobananas.png'
 
 const experiences: Experience[] = [
+  {
+    url: "https://nobananas.io/",
+    _type: 'experience',
+    company: "AI sensored blockchain live streaming",
+    companyImage: nobananas,
+    stack: [tensorflow, aceternity, nextjs, react],
+    dateStarted: "date",
+    dateEnded: "date",
+    isCurrentlyWorkingHere: true,
+    jobTitle: "No Bananas",
+    points: [
+      "Livepeer integration for streaming",
+      "Connection to Tensorflow API",
+      "Aceternity UI components"
+    ],
+    _createdAd: "date",
+    _id: "string",
+    _rev: "string",
+    _updatedAt: "date",
+  },
   {
     url: "https://veme-beta.vercel.app/",
     _type: 'experience',
@@ -175,8 +197,9 @@ const WorkExperience = () => {
       transition={{ duration: 1.5 }}
       className="h-screen flex flex-col relative overflow-hidden text-center max-w-full px-8 md:px-10 justify-evenly mx-auto items-center md:flex-row xl:space-y-10"
     >
-      <h3 className="absolute top-16 uppercase tracking-[15px] text-gray-500 text-xl md:top-24">
-        Recent projects
+      <h3 className="absolute top-24 uppercase tracking-[15px] text-gray-500 text-xl md:top-24">
+        Most Recent
+      <span className='text-xs block tracking-normal mt-2'>Click on project image to view project</span>
       </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#6d28d9]/50 mt-24 text-left md:mt-10">
         {experiences
