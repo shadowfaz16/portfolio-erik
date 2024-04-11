@@ -60,9 +60,9 @@ const Projects = ({projects}: Props) => {
               <p className="text-center">
                 {project?.summary}
               </p>
-              <Link className="flex items-center justify-center" href={`${project?.linkToProject}`}>
+              {/* <Link className="flex items-center justify-center" href={`${project?.linkToProject}`}>
                 {project?.linkToProject}
-              </Link>
+              </Link> */}
             </div>
           </div>
         ))}

@@ -13,8 +13,7 @@ type Props = {
 }
 
 const Hero = ({pageInfo}: Props) => {
-  const mounted = useIsMounted();
-  const { address, isConnected } = useAccount();
+  // const mounted = useIsMounted();
     const [text, count] = useTypewriter({
       words: [
         `${pageInfo?.name}`,
@@ -26,14 +25,14 @@ const Hero = ({pageInfo}: Props) => {
       delaySpeed: 2000,
     });
 
-    const useFunds = () => {
-      (window as any).Cypher(
-        `${address}`,
-        "0x1",
-        "0xdac17f958d2ee523a2206206994597c13d831ec7",
-        23,
-      );
-    }
+    // const useFunds = () => {
+    //   (window as any).Cypher(
+    //     `${address}`,
+    //     "0x1",
+    //     "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    //     23,
+    //   );
+    // }
 
     // useEffect(() => {
     //   if (isConnected) {
@@ -77,13 +76,13 @@ const Hero = ({pageInfo}: Props) => {
           <Link href="#contact">
             <button className="heroButton">Contact</button>
           </Link>
-          {mounted ? (
+          {/* {mounted ? (
             isConnected ? (
               <Link href="#pay">
                 <button className="heroButton" onClick={useFunds}>Pay</button>
               </Link>
             ) : null
-          ) : null}
+          ) : null} */}
         </div>
       </div>
     </div>

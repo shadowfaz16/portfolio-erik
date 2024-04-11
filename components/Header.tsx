@@ -3,7 +3,6 @@ import { SocialIcon } from 'react-social-icons'
 import { motion } from 'framer-motion'
 import { Social } from '../typings'
 import Link from 'next/link'
-import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 type Props = {
   socials: Social[];
@@ -64,7 +63,7 @@ const Header = ({ socials }: Props) => {
         className="flex flex-row items-center text-gray-300 cursor-pointer"
       >
         {/* avatar */}
-        <ConnectButton accountStatus="avatar" chainStatus="icon" />
+        {/* <ConnectButton accountStatus="avatar" chainStatus="icon" /> */}
       </motion.div>
     </header>
   );

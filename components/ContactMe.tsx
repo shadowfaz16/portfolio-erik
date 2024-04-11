@@ -2,6 +2,7 @@ import React from 'react'
 import {PhoneIcon, MapPinIcon, EnvelopeIcon} from "@heroicons/react/24/solid"
 import { useForm, SubmitHandler } from "react-hook-form";
 import { SocialIcon } from 'react-social-icons';
+import Link from 'next/link';
 
 
 type Inputs = {
@@ -36,27 +37,33 @@ const ContactMe = (props: Props) => {
           <br /> <span className="underline decoration-[#6d28d9]">LFTalk</span>
         </h4>
         <div className="flex items-center justify-center">
+          <Link href="tel:+2348160000000">
           <PhoneIcon className="animate-pulse w-7 h-7 text-purple-700" />
+          </Link>
           <SocialIcon
             className="animate-pulse w-7 h-7 text-purple-700 cursor-pointer"
             network="whatsapp"
             fgColor="#7e22ce"
             bgColor="transparent"
           />
+          <Link href="https://t.me/shadowfaz16">
           <SocialIcon
             className="animate-pulse w-7 h-7 cursor-pointer"
             network="telegram"
             fgColor="#7e22ce"
             bgColor="transparent"
           />
+          </Link>
+          <Link href="https://mailto:erikfazju@gmail.com">
           <SocialIcon
             network="email"
             fgColor="#7e22ce"
             bgColor="transparent"
             className="animate-pulse w-7 h-7 cursor-pointer"
           />
+          </Link>
         </div>
-        <form
+        {/* <form
           className="flex flex-col space-y-2 mx-auto"
           onSubmit={handleSubmit(onSubmit)}
         >
@@ -91,7 +98,7 @@ const ContactMe = (props: Props) => {
           >
             Submit
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
   );

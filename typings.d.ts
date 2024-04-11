@@ -44,6 +44,7 @@ export interface Project extends SanityBody {
 
 export interface Experience extends SanityBody {
     _type: 'experience';
+    url: string;
     company: string;
     companyImage: string;
     stack: StaticImageData[];
