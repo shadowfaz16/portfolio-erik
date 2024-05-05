@@ -37,16 +37,18 @@ const ContactMe = (props: Props) => {
           <br /> <span className="underline decoration-[#6d28d9]">LFTalk</span>
         </h4>
         <div className="flex items-center justify-center">
-          <Link href="tel:+2348160000000">
+          <Link href="tel:+528116929376">
           <PhoneIcon className="animate-pulse w-7 h-7 text-purple-700" />
           </Link>
+          <Link href="https://wa.me/528116929376">
           <SocialIcon
             className="animate-pulse w-7 h-7 text-purple-700 cursor-pointer"
             network="whatsapp"
             fgColor="#7e22ce"
             bgColor="transparent"
           />
-          <Link href="https://t.me/shadowfaz16">
+          </Link>
+          <Link href="t.me/shadowfaz16">
           <SocialIcon
             className="animate-pulse w-7 h-7 cursor-pointer"
             network="telegram"
@@ -54,7 +56,7 @@ const ContactMe = (props: Props) => {
             bgColor="transparent"
           />
           </Link>
-          <Link href="https://mailto:erikfazju@gmail.com">
+          <Link href="mailto:erikfazju@gmail.com">
           <SocialIcon
             network="email"
             fgColor="#7e22ce"
