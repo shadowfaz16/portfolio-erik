@@ -47,7 +47,7 @@ const experiences: Experience[] = [
     _updatedAt: "date",
   },
   {
-    url: "https://veme-beta.vercel.app/",
+    url: "https://veme.pro/",
     _type: 'experience',
     company: "AI generated memes platform",
     companyImage: veme,
@@ -57,9 +57,9 @@ const experiences: Experience[] = [
     isCurrentlyWorkingHere: true,
     jobTitle: "VEME",
     points: [
-      "Frontend",
-      "Connection to OpenAI API",
-      "Meme generation and sharing"
+      "AI video meme generation",
+      "Dope UI",
+      "Connection to OpenAI API"
     ],
     _createdAd: "date",
     _id: "string",
