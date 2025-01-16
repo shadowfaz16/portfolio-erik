@@ -12,7 +12,7 @@ import pxm from "../assets/logos/pxmlogo.svg"
 import react from "../assets/logos/react.svg"
 import moralis from "../assets/logos/moralis.svg"
 import rainbow from "../assets/logos/rainbow.svg"
-import refi from "../assets/logos/refi-rides-logo.png"
+import nodes2 from "../assets/logos/nodes2.png"
 import op from "../assets/coins/op.png"
 import bnb from "../assets/coins/bnb.png"
 import sol from "../assets/coins/sol.png"
@@ -27,19 +27,19 @@ import nobananas from '../assets/logos/nobananas.png'
 
 const experiences: Experience[] = [
   {
-    url: "https://nobananas.io/",
+    url: "https://nodes.ai/",
     _type: 'experience',
-    company: "AI sensored blockchain live streaming",
-    companyImage: nobananas,
-    stack: [tensorflow, aceternity, nextjs, react],
+    company: "Powering Demand for the Next Gen-AI",
+    companyImage: nodes2,
+    stack: [eth, thirdwebb, nextjs],
     dateStarted: "date",
     dateEnded: "date",
     isCurrentlyWorkingHere: true,
-    jobTitle: "No Bananas",
+    jobTitle: "Node AI",
     points: [
-      "Livepeer integration for streaming",
-      "Connection to Tensorflow API",
-      "Aceternity UI components"
+      "Best website I've created",
+      "Sanity CMS backend",
+      "Decentralized GPU power"
     ],
     _createdAd: "date",
     _id: "string",
@@ -67,23 +67,23 @@ const experiences: Experience[] = [
     _updatedAt: "date",
   },
   {
-    url: "https://mint.mygeotokens.com/",
+    url: "https://nobananas.io/",
     _type: 'experience',
-    company: "solana nfts",
-    companyImage: mygeotokens,
-    stack: [sol, thirdwebb, link, nextjs, react],
+    company: "AI sensored blockchain live streaming",
+    companyImage: nobananas,
+    stack: [tensorflow, aceternity, nextjs, react],
     dateStarted: "date",
     dateEnded: "date",
     isCurrentlyWorkingHere: true,
-    jobTitle: "MyGeoTokens",
+    jobTitle: "No Bananas",
     points: [
-      "Solana smart contracts",
-      "Minting site",
-      "Verifiable source of randomness for smart contracts (Chainlink Integration)"
+      "Livepeer integration for streaming",
+      "Connection to Tensorflow API",
+      "Aceternity UI components"
     ],
     _createdAd: "date",
     _id: "string",
-    _rev: "string",
+    _rev: "setring",
     _updatedAt: "date",
   },
   {
@@ -100,6 +100,26 @@ const experiences: Experience[] = [
       "Dashboards for collection admins and token holders",
       "Web2 and web3 login",
       "Crypto and credit card sales"
+    ],
+    _createdAd: "date",
+    _id: "string",
+    _rev: "string",
+    _updatedAt: "date",
+  },
+  {
+    url: "https://mint.mygeotokens.com/",
+    _type: 'experience',
+    company: "solana nfts",
+    companyImage: mygeotokens,
+    stack: [sol, thirdwebb, link, nextjs, react],
+    dateStarted: "date",
+    dateEnded: "date",
+    isCurrentlyWorkingHere: true,
+    jobTitle: "MyGeoTokens",
+    points: [
+      "Solana smart contracts",
+      "Minting site",
+      "Verifiable source of randomness for smart contracts (Chainlink Integration)"
     ],
     _createdAd: "date",
     _id: "string",
@@ -140,26 +160,6 @@ const experiences: Experience[] = [
       "Smart contracts & UI",
       "Optimism attestation stations",
       "QR code integration"
-    ],
-    _createdAd: "date",
-    _id: "string",
-    _rev: "string",
-    _updatedAt: "date",
-  },
-  {
-    url: "https://refirides.com/",
-    _type: 'experience',
-    company: "NFT collection",
-    companyImage: refi,
-    stack: [eth, thirdwebb, nextjs, react],
-    dateStarted: "date",
-    dateEnded: "date",
-    isCurrentlyWorkingHere: true,
-    jobTitle: "Refi Rides",
-    points: [
-      "Credit card checkout",
-      "Polygon smart contracts",
-      "Powered y Thirdweb"
     ],
     _createdAd: "date",
     _id: "string",

@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import metashadow from "../public/metashadowlogo.png";
 import { PageInfo } from '../typings';
 import { urlFor } from '../sanity';
 
@@ -34,7 +33,7 @@ const About = ({pageInfo}: Props) => {
             }}
           // viewport={{once: true}}
           src={urlFor(pageInfo?.profilePic).url()}
-          className="-mb-32 flex-shrink-0 w-44 h-44 rounded-full object-cover md:mb-0 md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
+          className="-mb-32 flex-shrink-0 w-32 h-32 rounded-full object-cover md:mb-0 md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
         />
         <div className="space-y-5 lg:space-y-10 px-0 md:px-10">
           <h4 className="lg:text-4xl text-2xl font-semibold">
