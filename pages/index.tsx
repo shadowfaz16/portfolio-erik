@@ -10,6 +10,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Projects from '../components/Projects'
 import WorkExperience from '../components/WorkExperience'
+import Hackathons from '../components/Hackathons'
 import { Client, Experience, PageInfo, Project, Social } from '../typings'
 import { fetchClients } from '../utils/fetchClients'
 import { fetchExperiences } from '../utils/fetchExperiences'
@@ -66,6 +67,11 @@ const Home = ({ pageInfo, clients, projects, socials }: Props) => {
       {/* projects */}
       <section id="projects" className="snap-start">
         <Projects projects={projects} />
+      </section>
+
+      {/* hackathons */}
+      <section id="hackathons" className="snap-start">
+        <Hackathons />
       </section>
 
       {/* contact */}

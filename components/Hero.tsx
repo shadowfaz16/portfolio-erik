@@ -70,6 +70,9 @@ const Hero = ({pageInfo}: Props) => {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
+          <Link href="#hackathons">
+            <button className="heroButton">Hackathons</button>
+          </Link>
           <Link href="#clients">
             <button className="heroButton">Clients</button>
           </Link>
